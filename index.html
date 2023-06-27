@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eric Russo | WeatherApp</title>
+</head>
+<body>
+    <div class="weatherApp">
+        <div class="searchBox">
+            <i class="fa-solid fa-location-dot"></i>
+            <input class="searchBox__input" type="text" placeholder="Enter your Location">
+            <button class="fa-solid fa-magnifying-glass searchBox__btn"></button>
+        </div>
+
+        <div class="notFound">
+            <img class="notFound__img" src="/imgs/404.png" alt="">
+            <p class="notFound__p">Oops! Invalid Location : </p>
+        </div>
+        
+        <div class="weatherBox">
+            <img class="weatherBox__img" src="" alt="">
+            <p class="weatherBox__temperature"></p>
+            <p class="weatherBox__description"></p>
+        </div>
+
+        <div class="weatherDetails">
+            <div class="weatherDetails__humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="humidity__text">
+                    <span class="humidity__span"></span>
+                    <p class="humidity__p">Humidity</p>
+                </div>
+            </div>
+            <div class="weatherDetails__wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="wind__text"></div>
+                <span class="wind__span"></span>
+                <p class="wind__p">Wind Speed</p>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</html>
