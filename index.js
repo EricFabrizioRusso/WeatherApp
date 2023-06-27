@@ -7,13 +7,13 @@ const weatherDetails= d.querySelector('.weatherDetails');
 const error404= d.querySelector('.notFound');
 
 
-document.addEventListener('click keydown',(e)=>{
+d.addEventListener('click',(e)=>{
 
     const ApiKey= 'f4cda76e3ae3b11827d9d4989bb93279';
     const city= d.querySelector('.searchBox__input').value;
     console.log('zzz')
-    if(e.target === search || e.key === 'Enter'){
-        console.log("aaa")
+    if(e.target === search){
+       
 
         if(city === "") return;
     
