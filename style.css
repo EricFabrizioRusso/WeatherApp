@@ -15,12 +15,14 @@
 
 body{
 
-    background: #292929;
+    background: #06283D;
     /* color: #fff; */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
+   
 
 
 }
@@ -35,10 +37,13 @@ body{
     overflow: hidden; 
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
+    box-shadow: -10px 0  30px 10px rgb(0, 0, 0, .5);
 
     transition: all .6s ease-in-out;
 
 }
+
+
 
 .searchBox{
 
@@ -103,6 +108,12 @@ body{
 .weatherBox{
 
     text-align: center;
+
+}
+
+.weatherBox .currentTime{
+
+    margin: 20px;
 
 }
 
