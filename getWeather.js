@@ -81,7 +81,7 @@ export default function weather(){
             container.style.height = '660px';
 
 
-            const getZoneHour=async(lat,lon)=>{
+            /*const getZoneHour=async(lat,lon)=>{
 
                
                 let apiKey= 'PNC0N15LH3EA'
@@ -113,7 +113,7 @@ export default function weather(){
             }
 
         
-            getZoneHour(json.coord.lat,json.coord.lon)
+            getZoneHour(json.coord.lat,json.coord.lon)*/
 
 
 
