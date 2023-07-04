@@ -38,6 +38,7 @@ export default function weather(){
             const humidity = document.querySelector('.weatherDetails .weatherDetails__humidity .humidity__span');
             const wind = document.querySelector('.weatherDetails .weatherDetails__wind .wind__span');
 
+            console.log(json);
 
             switch (json.weather[0].main) {
                 case 'Clear':
@@ -47,7 +48,7 @@ export default function weather(){
 
                 case 'Rain':
                     image.src = 'imgs/rain.png';
-                    body.style.backgroundImage = 'url(/imgs/sunnyDay.jpg)';
+                    body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
                     break;
 
                 case 'Snow':
@@ -60,9 +61,14 @@ export default function weather(){
                     body.style.backgroundImage = 'url(/imgs/cloudyDay.jpg)';
                     break;
 
-                case 'Haze':
+                case 'Mist':
                     image.src = 'imgs/mist.png';
                     body.style.backgroundImage = 'url(/imgs/mistDay.jpg)';
+                    break;
+
+                case 'Thunderstorm':
+                    image.src = 'imgs/rain.png';
+                    body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
                     break;
 
                 default:
