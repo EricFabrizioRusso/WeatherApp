@@ -70,6 +70,11 @@ export default function weather(){
                     image.src = 'imgs/rain.png';
                     body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
                     break;
+                    
+                case 'Drizzle':
+                    image.src = 'imgs/rain.png';
+                    body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
+
 
                 default:
                     image.src = '';
