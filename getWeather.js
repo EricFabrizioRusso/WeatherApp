@@ -70,14 +70,16 @@ export default function weather(){
                     image.src = 'imgs/rain.png';
                     body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
                     break;
-                    
+
                 case 'Drizzle':
                     image.src = 'imgs/rain.png';
                     body.style.backgroundImage = 'url(/imgs/rainyDay.jpg)';
+                    break;
 
 
                 default:
                     image.src = '';
+                    body.style.backgroundImage = 'url(/imgs/backgroundMap.jpg)';
             }
 
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;

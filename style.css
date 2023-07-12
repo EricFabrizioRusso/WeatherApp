@@ -22,8 +22,9 @@ body{
     justify-content: center;
     align-items: center;
     object-fit: cover;
+    background-image: url(/imgs/backgroundMap.jpg);
    
-
+    transition: all .3s ease-in-out;
 
 }
 
