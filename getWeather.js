@@ -29,7 +29,7 @@ export default function weather(){
 
             if(!res.ok) throw new Error("Error al obtener la ciudad: " + res.status)
             
-            console.log(json);
+
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
 
@@ -42,7 +42,7 @@ export default function weather(){
             const temp_max= document.querySelector('.wheatherMM__max');
    
 
-            console.log(json);
+
 
             switch (json.weather[0].main) {
                 case 'Clear':
