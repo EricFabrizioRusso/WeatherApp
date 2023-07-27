@@ -2,4 +2,4 @@
 
 In this application, you can access the weather conditions of a city.
 
-![Screenshot](/imgs/ScreeshotWeatherApp.png)
+![Screenshot](/imgs/Screeshot.png)
