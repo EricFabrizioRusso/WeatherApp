@@ -253,6 +253,26 @@ body{
         opacity: 1;
     }
 } 
+.weatherMM{
+
+    margin: 2em 0;
+    text-align: center;
+    color: #06283D;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+
+
+}
+
+.wheatherMM__min, .wheatherMM__max{
+
+    margin: .5em;
+   
+
+}
 
 
 

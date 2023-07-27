@@ -1,4 +1,4 @@
-const d=document, w= window, n=navigator;
+const d=document;
 
 
 const container= d.querySelector('.weatherApp');
@@ -8,6 +8,7 @@ const weatherDetails= d.querySelector('.weatherDetails');
 const error404= d.querySelector('.notFound');
 const time= d.querySelector('.currentTime');
 const body= d.querySelector('body');
+const weatherMM= document.querySelector('.weatherMM');
 
 
 export default function weather(){
@@ -28,7 +29,7 @@ export default function weather(){
 
             if(!res.ok) throw new Error("Error al obtener la ciudad: " + res.status)
             
-            //console.log(json);
+            console.log(json);
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
 
@@ -37,6 +38,9 @@ export default function weather(){
             const description = document.querySelector('.weatherBox .weatherBox__description');
             const humidity = document.querySelector('.weatherDetails .weatherDetails__humidity .humidity__span');
             const wind = document.querySelector('.weatherDetails .weatherDetails__wind .wind__span');
+            const temp_min= document.querySelector('.wheatherMM__min');
+            const temp_max= document.querySelector('.wheatherMM__max');
+   
 
             console.log(json);
 
@@ -86,47 +90,16 @@ export default function weather(){
             description.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temp_max.innerHTML=`<span>Max °C ${parseInt(json.main.temp_max)}</span>`
+            temp_min.innerHTML=`<span>Min °C ${parseInt(json.main.temp_min)}</span>`
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
             container.style.height = '660px';
-
-
-            /*const getZoneHour=async(lat,lon)=>{
-
-               
-                let apiKey= 'PNC0N15LH3EA'
-
-                try{
-
-                    
-                    let res= await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${lat}&lng=${lon}`);
-                    let json= await res.json();
-
-                    if(!res.ok) throw new Error("No se a podido acceder a la hora del lugar" + res.status);
-                    
-                    
-                    time.innerHTML= `<span>${json.formatted}<span>`
-
-
-
-                }catch(error){
-
-
-                    console.warn(error)
-
-                }
-
-
-
-
-
-            }
-
-        
-            getZoneHour(json.coord.lat,json.coord.lon)*/
+            weatherMM.style.display='';
+    
 
 
 
@@ -139,6 +112,7 @@ export default function weather(){
             weatherDetails.style.display = 'none';
             error404.style.display = 'block';
             error404.classList.add('fadeIn');
+            weatherMM.style.display='none';
             return;
 
 
